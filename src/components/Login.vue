@@ -47,7 +47,7 @@ export default {
           if (res.meta.status !== 200) {
             return this.$message.error('用户名或密码不存在')
           }
-          window.sessionStorage.setItem('token', res.pushdata.token)
+          window.sessionStorage.setItem('token', res.data.token)
           this.$router.push('/home')
         }
       })
